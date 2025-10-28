@@ -1,9 +1,7 @@
 services:
   udemy-downloader:
     container_name: udemy-downloader
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/whit3str/udemy-downloader:latest
     volumes:
       - ./output:/app/out_dir:rw
       - ./keyfile.json:/app/keyfile.json:ro
